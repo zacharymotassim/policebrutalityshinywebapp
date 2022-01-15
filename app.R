@@ -1,12 +1,9 @@
 # Zachary Motassim
-# CSCI 39579
-# Project 2
 # https://www.propublica.org/datastore/dataset/civilian-complaints-against-new-york-city-police-officers
 library(shiny)
 library(tidyverse) 
 library(ggplot2)
 library(RColorBrewer)
-#setwd("~/Desktop/Data visualization/dataviselevennine")
 data <- read_csv('allegationscleaned.csv')
 data
 data1 <- data %>% count(allegation) %>% arrange(desc(n)) %>% head(5)
